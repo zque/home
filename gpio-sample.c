@@ -1,0 +1,3 @@
+HAL_GPIO_ReadPin(K5_GPIO_Port,K5_Pin);
+
+HAL_GPIO_WritePin(LED3_GPIO_Port,LED3_Pin,GPIO_PIN_RESET);
