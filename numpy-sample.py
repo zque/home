@@ -70,6 +70,7 @@ a = np.logspace(0,9,10,base = 2)
 print(a)
 
 #**************************slice*********************
+print("*********************slice*******************")
 a = range(10)
 s = slice(2,7,2)
 print(a[s])
@@ -81,3 +82,38 @@ print(a[1:])
 print(a[:,1])
 print(a[1,...])
 print(a[...,1:])
+print(a[a>5])
+a = np.array([np.nan,1,2,np.nan,3,4,5])
+print(np.isnan(a))
+print(a[np.isnan(a)])
+a = np.array([1,2+6j,5,3.5+5j])
+print(a[np.iscomplex(a)])
+x = np.arange(32).reshape(8,4)
+print(x[[4,2,1,7]])
+print(x[:,range(3,1,-1)])
+a=x[np.ix_([1,5,7,2],[0,3,1,2])] #行列拼接
+print(a)
+
+print("**************************broadcast(数组运算）***************")
+a = np.array([1,2,3,4])
+b = np.array([10,20,30,40])
+c = a*b
+print(c)
+
+a = np.array([[0,0,0],
+			[10,10,10],
+			[20,20,20],
+			[30,30,30]])
+b = np.array([1,2,3])
+c = np.arange(1,5).reshape(4,1)
+print(a+c)
+print(a+b)
+
+print("***************************iterater*****************")
+a = np.arange(6).reshape(2,3)
+print(a)
+for x in np.nditer(a):
+	print(x,end=", ")
+print('\n')
+for x in a:
+	print(x,end=", ")
