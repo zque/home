@@ -1,0 +1,35 @@
+AT+CGSOCKCONT=1,"IP","CMNET"
+AT+CSOCKSETPN=1
+AT+NETOPEN
+AT+CIPOPEN=1,"UDP",,,20030
+AT+CIPSEND=1,19,"134.175.73.93",20030
+AT+CIPSEND=1,19,"219.128.73.196",20030
+
+
+
+
+
+
+	printf("AT+IPR=9600\r\n");
+	printf("ATE0\r\n");
+	printf("AT+CIPCLOSE=0");
+	printf("AT+CNMP=38\r\n");
+	printf("AT+CGSOCKCONT=1,\"IP\",\"CMNET\"\r\n");
+	printf("AT+CSOCKSETPN=1\r\n");
+	printf("AT+CIPMODE=0\r\n");
+	printf("AT+NETOPEN\r\n");
+	printf("AT+CIPHEAD=1\r\n");
+	printf("AT+CIPSRIP=0\r\n");
+	
+//	printf("AT+CGSOCKCONT=1,\"IP\",\"CMNET\"\r\n");//移动CMNET,联通UNINETprintf();
+//	printf("AT+CSOCKSETPN=1\r\n");
+//	printf("AT+NETOPEN\r\n");
+
+//	printf("AT+CIPOPEN=1,\"UDP\",,,20030\r\n");//虚拟服务器20019
+
+//	printf("AT+CIPSEND=1,19,\"134.175.73.93\",20030\r\n");    //UDP虚拟服务器
+//	printf("AT+IPR=9600\r\n");
+//	printf("AT+CIPHEAD=1\r\n");
+//	printf("AT+CIPSRIP=0\r\n");
+//	printf("AT+CNMP=38\r\n");
+//	printf("AT+CIPMODE=0\r\n");
